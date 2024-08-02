@@ -1,15 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Product = () => {
   return (
     <div>
       <h1>PRODUCT LIST</h1>
       <ul>
-        <li>Product 01</li>
-        <li>Product 02</li>
-        <li>Product 03</li>
-        <li>Product 04</li>
-        <li>Product 05</li>
+        <li><Link to="/product/01">Product 01</Link></li>
+        <li><Link to="/products/02">Product 02</Link></li>
+        <li><Link to="/products/03">Product 03</Link></li>
       </ul>
     </div>
   )
