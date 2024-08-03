@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./component/home/Home";
 import Product from "./component/product/Product";
 import Header from "./component/layout/Header";
@@ -11,12 +11,13 @@ function App() {
       <Header />
       <main>
         <Routes>
+          <Route path="/" element={
+            < Navigate to="/home"/>
+          } />
           <Route path="/home" element={<Home />}></Route>
-          <Route path="/product" element={<Product />}></Route>
-          <Route
-            path="/product-details/:id"
-            element={<ProductDetails />}
-          ></Route>
+          <Route path="/home/username" element={<p>Welcome User</p>} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/product-details/:id" element={<ProductDetails />} />
         </Routes>
       </main>
     </>
